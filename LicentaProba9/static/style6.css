@@ -1,0 +1,22 @@
+body {
+    background: linear-gradient(rgba(0,0,0,0.5), #009688), url('../login/Static/automatizarecasa.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-color: #c9d6ff;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 50px;
+    color: #fff; /* culoarea textului pentru titlul h1 */
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    border: 5px solid #fff; /* adăugăm o bordură albă în jurul imaginii */
+    border-radius: 10px; /* pentru o margine rotunjită */
+}

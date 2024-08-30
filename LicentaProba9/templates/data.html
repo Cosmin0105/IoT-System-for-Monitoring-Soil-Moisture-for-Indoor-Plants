@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data</title>
+    <link rel="stylesheet" type="text/css" href="/static/style5.css">
+    <meta http-equiv="refresh" content="10"> <!-- Actualizează pagina automat odată la fiecare 10 sec-->
+    <meta name="refresh" content="10"> <!-- Actualizează conținutul paginii automat odată la fiecare -->
+</head>
+<body>
+    <!-- Formular pentru selectarea senzorului -->
+    <form action="/select_sensor" method="post">
+        <label for="sensor">Select Sensor:</label>
+        <select id="sensor" name="sensor">
+            <option value="Senzor de Umiditate 1">Senzor de Umiditate 1</option>
+            <option value="Senzor de Umiditate 2">Senzor de Umiditate 2</option>
+            <!-- Adaugă mai multe opțiuni pentru fiecare senzor disponibil -->
+        </select>
+        <input type="submit" value="Select">
+    </form>
+
+    <form action="/select_plant" method="post">
+        <label for="plant">Select Plant:</label>
+        <select id="plant" name="plant">
+             {% for plant in plants %}
+             <option value="{{ plant.nume_planta }}" {% if selected_plant == plant.nume_planta %}selected{% endif %}>{{ plant.nume_planta }}</option>
+             {% endfor %}
+        </select>
+        <input type="submit" value="Select">
+    </form>
+
+    <!-- Threshold Input Form -->
+    <form action="/set_threshold" method="post">
+        <label for="threshold">Insert Threshold:</label>
+        <input type="text" id="threshold" name="threshold" value="{{ threshold }}">
+        <input type="submit" value="Set">
+    </form>
+ 
+    <form action="/activate_pump" method="post">
+        <label for="activate_pump">Activate Water Pump:</label>
+        <input type="submit" value="ON">
+    </form>
+
+   <h2>Soil Moisture Status: {{ soil_status }}</h2>
+
+</body>
+</html>

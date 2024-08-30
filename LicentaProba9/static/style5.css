@@ -1,0 +1,86 @@
+body {
+    /* Adăugăm background-ul dorit */
+    background: linear-gradient(rgba(0,0,0,0.5), #009688), url(automatizarecasa.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white; /* Schimbăm culoarea textului la negru pentru contrast */
+}
+
+h2, label, select {
+    text-align: left; /* Aliniere la stânga pentru titluri și eticheta senzorului */
+    color: black; /* Schimbăm culoarea textului pentru a se potrivi cu stilul existent */
+    font-size: 1.5em; /* Setează dimensiunea textului */
+    font-weight: bold; /* Setează grosimea textului */
+    margin-bottom: 10px; /* Adăugăm un spațiu între elementele de formular */
+}
+
+select {
+    width: 80%; /* Lățimea completă a elementului select */
+    font-weight: bold; /* Setează grosimea textului */
+    margin-bottom: 20px; /* Adăugăm un spațiu mai mare între elementele de formular */
+}
+
+.img-container {
+    width: 50%;
+    border: 3px solid #3AAA35;
+    border-radius: 6px;
+    overflow: hidden;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+}
+
+img {
+    width: 100%;
+}
+
+footer {
+    background-color: #777;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+input[type="submit"] {
+    background: #009688; /* Schimbăm culoarea de fundal a butonului la verde */
+    color: black; /* Schimbăm culoarea textului butonului la negru */
+    padding: 10px 20px; /* Adăugăm puțin spațiu în jurul textului butonului */
+    border: none; /* Eliminăm bordura butonului */
+    border-radius: 4px; /* Rotunjim colțurile butonului */
+    cursor: pointer; /* Facem cursorul să arate ca o mână atunci când trecem peste buton */
+    transition: background-color 0.3s; /* Adăugăm o tranziție lină pentru culoarea de fundal */
+    display: block; /* Afișăm butoanele pe linii separate */
+    width: 100%; /* Lățimea completă a butoanelor */
+    margin-top: 10px; /* Adăugăm un spațiu vertical între butoane */
+}
+
+input[type="submit"]:hover {
+    background: #00796B; /* Schimbăm culoarea de fundal a butonului la o nuanță mai întunecată de verde la hover */
+}
+select#sensor {
+    width: 100%; /* Asigură lățimea completă a selectorului */
+    font-weight: bold; /* Setează grosimea textului */
+
+}
+* Modifică stilul pentru containerul de formulare */
+.form-container {
+    display: flex; /* Folosim flexbox pentru a alinia elementele pe aceeași linie */
+    justify-content: space-between; /* Aliniem elementele la marginile containerului */
+    flex-wrap: wrap; /* Permite elementelor să treacă pe mai multe linii dacă nu există suficient spațiu */
+}
+
+/* Modifică stilul pentru fiecare formular */
+form {
+    flex-basis: 48%; /* Setăm o lățime fixă pentru fiecare formular */
+}
+
+select {
+    width: calc(100% - 10px); /* Setăm lățimea dropdown-ului pentru a se potrivi cu lățimea formularului minus un spațiu mic */
+    background-color: #009688; /* Adăugăm culoarea de fundal pentru dropdown */
+    color: white; /* Schimbăm culoarea textului pentru contrast */
+    border: none; /* Eliminăm bordura dropdown-ului */
+    padding: 8px; /* Adăugăm puțin spațiu în jurul textului dropdown-ului */
+    border-radius: 4px; /* Rotunjim colțurile dropdown-ului */
+}

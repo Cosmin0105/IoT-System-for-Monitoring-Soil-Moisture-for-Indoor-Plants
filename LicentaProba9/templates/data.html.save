@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Page</title>
+    <link rel="stylesheet" type="text/css" href="/static/style4.css">
+</head>
+<body>
+    <h1>Sensor Data</h1>
+    <div class="sensor-info">
+        <h2>Soil Moisture (Raw Value)</h2>
+        <div id="soil_moisture">{{ soil_status }}</div>
+    </div>
+
+    <script>
+        // Funcția pentru refresh automat la fiecare 10 secunde
+        setInterval(function() {
+            location.reload();
+        }, 10000); // Interval de 10 secunde (10000 milisecunde)
+    </script>
+</body>
+</html>
